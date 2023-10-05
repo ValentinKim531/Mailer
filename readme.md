@@ -43,7 +43,7 @@ docker build -t mailer-service .
 Запустите контейнер:
 
 ```
-docker run -e SMTP_HOST=host.docker.internal -e SMTP_PORT=2525 -p 8000:8000 mailer-service 
+docker run -e SMTP_HOST=host.docker.internal -e SMTP_PORT=2525 -p 8000:8000 -v $(pwd):/app mailer-service 
 ```
 ---
 <a id='work'></a>
