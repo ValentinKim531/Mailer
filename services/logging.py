@@ -4,7 +4,6 @@ from fastapi import Request
 
 
 logger = logging.getLogger("uvicorn")
-print('yes')
 
 
 def logging_actions():
