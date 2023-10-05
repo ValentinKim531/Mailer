@@ -52,6 +52,12 @@ docker run -e SMTP_HOST=host.docker.internal -e SMTP_PORT=2525 -p 8000:8000 -v $
 ```
 http://localhost:8000/docs
 ```
+
+Проверка доставленных Email:
+```
+http://localhost:3000/
+```
+
 ---
 <a id='testing></a>
 ## 3. 🌍 Для тестирования приложения с помощью Pytest, наберите 
