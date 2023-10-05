@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+bin/
+lib/
+include/
+*.pyc
+__pycache__/
+pyvenv.cfg
+.idea
+.DS_Store
+app.log
+.pytest_cache
