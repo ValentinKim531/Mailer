@@ -12,45 +12,45 @@
 Чтобы запустить `проект` локально, необходимо произвести `клонирование` на локальное устройство следующей командой
 
 ```
-   $ git clone [https://github.com/USERNAME/REPOSITORY]
+git clone [https://github.com/USERNAME/REPOSITORY]
 ```
 
 После успешного клонирования проекта, создаем и активируем `виртуальное окружение` 
 ```
-   $ python3 -m virtualenv venv
+python3 -m virtualenv venv
 ```
 ```
-   $ source venv/bin/activate 
+source venv/bin/activate 
 ```
 и загружаем все зависимости проекта:
 
 ```
-   pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Запустите SMTP сервер для разработки (`smtp4dev`):
 
 ```
-   docker run --rm -it -p 3000:80 -p 2525:25 rnwood/smtp4dev 
+docker run --rm -it -p 3000:80 -p 2525:25 rnwood/smtp4dev 
 ```
 
 Создайте образ `приложения` на Docker:
 
 ```
-   docker build -t mailer-service .
+docker build -t mailer-service .
 ```
 
 Запустите контейнер:
 
 ```
-    docker run -e SMTP_HOST=host.docker.internal -e SMTP_PORT=2525 -p 8000:8000 mailer-service 
+docker run -e SMTP_HOST=host.docker.internal -e SMTP_PORT=2525 -p 8000:8000 mailer-service 
 ```
 ---
 <a id='work'></a>
 ## 2. 📫 Для отправки Email перейдите по ссылке:
 
 ```
-    http://localhost:8000/docs
+http://localhost:8000/docs
 ```
 ---
 <a id='testing></a>
@@ -58,5 +58,5 @@
 ## в командной строке, где вы запустили приложение:  
 
 ```
-    hpytest test.py
+pytest test.py
 ```
